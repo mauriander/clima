@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import  CardTemp  from './components/CardTemp';
 import  CardTermo  from './components/CardTermo';
 import  CardP  from './components/CardP';
-import  Card  from './components/Card';
+import  CardBox  from './components/CardBox';
 import Modo from './components/Modo';
 
 
@@ -47,7 +47,7 @@ function App() {
       </LeftColumn>
       <RightColumn>
 <CardP/>
-<Card/>
+<CardBox/>
 <Modo/>
   </RightColumn>
     </AppTotal>

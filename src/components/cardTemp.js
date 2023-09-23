@@ -29,10 +29,10 @@ export class CardTemp extends Component {
     return (
      <TotalTemp>
     <LeftColumn>
-Derecha
+Maxima
     </LeftColumn>
 <RightColumn>
-Izquierda
+Minima
 </RightColumn>
      </TotalTemp>
     )
