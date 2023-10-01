@@ -7,7 +7,7 @@ import { UserData } from '../data';
 
 const TotalTemp = styled.div`
   width: 300px;
-  height: 150px;
+  height: 25vh;
   border-radius: 5%;
   margin:32px;
   display: flex;

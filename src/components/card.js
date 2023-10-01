@@ -8,7 +8,7 @@ const TotalCard = styled.div`
 
   border-radius: 5%;
   margin:32px;
-     background:white;
+     background:transparent;
 `;
 
 

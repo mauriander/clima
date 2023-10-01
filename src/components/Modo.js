@@ -12,9 +12,7 @@ const Modo = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    // Aquí puedes aplicar lógica adicional para cambiar el tema de tu aplicación
-  };
+    setIsDarkMode(!isDarkMode);      };
 
  return (
     <ToggleButton onClick={toggleDarkMode} isDarkMode={isDarkMode}>

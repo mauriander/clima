@@ -23,7 +23,7 @@ const Card = styled.div`
   height: 90px;
   border-radius: 5%;
   margin:32px;
-    background:white;
+   background:transparent;
 `;
 const Barradiv = styled.div`
    width: 160px;

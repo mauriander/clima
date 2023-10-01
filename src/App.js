@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import  CardTemp  from './components/CardTemp';
 import  CardTermo  from './components/CardTermo';
+import imagenClima from './Clouds.png'
 
 // import  CardP  from './components/CardP';
 import  CardBox  from './components/CardBox';
@@ -12,13 +13,24 @@ import BarChart from './components/BarChart';
 import { UserData } from './data';
 
 import {Bar} from 'react-chartjs-2';
+const Imagen = styled.div`
+width:15vh;
+height: 15vh;
+text-align:center;
+   
 
+ 
+  
+`;
 
 const AppTotal = styled.div`
   display: flex;
   width: 100%;
    height: 100vh;
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    background-color: ${(props) => (props.isDarkMode ? '#154360' : '#FCF3CF')};
+  color: ${(props) => (props.isDarkMode ? '#FCF3CF' : '#154360')};
+  
+  ${'' /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */}
 
   flex-direction: column;
   flex-wrap: wrap;
@@ -26,42 +38,68 @@ const AppTotal = styled.div`
 
 const LeftColumn = styled.div`
   flex: 0 0 50%;
-
   padding: 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
+  @media (max-width: 480px) {
+    flex: 1; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    max-width: 100%;
+  }
  
 `;
 
 const RightColumn = styled.div`
-
-  flex: 0 0 50%; 
-  padding: 16px; 
+  flex: 0 0 50%;
+  padding: 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
+  @media (max-width: 480px) {
+    flex: 1; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    max-width: 100%;
+  }
 `;
 
 const Barrdiv = styled.div`
- color: white; /* Establece el color del texto en blanco */
-  width: 100%; /* Ajusta el ancho para que sea responsive */
-  max-width: 480px; /* Establece un ancho máximo opcional */
-  margin:32px; 
-  font-size: 32px; /* Tamaño de fuente predeterminado */
-  background-image: linear-gradient(135deg, #f83600 0%, #f9d423 100%); 
-
+ 
+  width: 100%;
+  max-width: 480px;
+  margin: 32px;
+  font-size: 32px;
+  background-image: linear-gradient(135deg, #f83600 0%, #f9d423 100%);
    @media (max-width: 400px)    {
     font-size: 14px; /* Cambia el tamaño de fuente para dispositivos móviles */
   }
 `;
+const ToggleButton = styled.button`
+    background-color: ${(props) => (props.isDarkMode ? '#154360' : '#FCF3CF')};
+  color: ${(props) => (props.isDarkMode ? '#FCF3CF' : '#154360')};
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  width:116px;
+`;
+
+
 function App() {
+
+   const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+    const imagen = 'Snow'; // Snow.png haze.png cloud.png
+  const direccion = './img/' + imagen + '.png';
+  const [imgclima, setImgClima] = useState(direccion);
 const labels = []; // Reemplaza con tus etiquetas reales
   const data = [];
   const [userData, setUserData] = useState({
-    responsive:true,
+   
       labels: UserData.map((data)=> data.hora),
       
       datasets: [
@@ -81,24 +119,36 @@ const labels = []; // Reemplaza con tus etiquetas reales
 
 
   return (
-    <AppTotal>
- 
-        <LeftColumn>
+       
+    <AppTotal isDarkMode={isDarkMode}>
+       
+    
+        <LeftColumn  >
+          <ToggleButton onClick={toggleDarkMode} isDarkMode={isDarkMode}>{isDarkMode ? 'Modo Claro' : 'Modo Oscuro'}</ToggleButton>
         <CardTermo />
-         <CardTemp />
 
-          
+          <Imagen>
+        <img src={imagenClima} alt="Clima" style={{width: '15vh' }} />
+      </Imagen>
+    
+         <CardTemp />        
        
       </LeftColumn>
+   
       <RightColumn>
+    
 
      <Barrdiv>
+     
     <BarChart chartData={userData}/>
    </Barrdiv> 
 
 <CardBox/>
-<Modo/>
+
+   
+    
   </RightColumn>
+  
     </AppTotal>
   );
 }

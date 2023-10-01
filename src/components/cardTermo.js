@@ -7,8 +7,8 @@ import { UserData } from '../data';
 
 const Termo = styled.div`
   
-width: 300px;
-  height: 300px;
+width: 35vh;
+  height: 35vh;
   border-radius: 50%;
   margin:32px;
   position: relative ;
@@ -17,6 +17,7 @@ width: 300px;
   color: #444;
   text-align: center;
   background:transparent;
+   
 `;
 const Centro = styled.div`
   position: absolute;
@@ -70,7 +71,8 @@ height: 116px;
 const Ciudad = styled.div`
  position: absolute;
   color:black;
-  font-size:bold;
+ 
+  font-weight: bold;
   bottom: 0px;
   left: 16px;
 
@@ -81,10 +83,8 @@ const Ciudad = styled.div`
 function CardTermo () {
 
     const promedioTemperatura = UserData.reduce((total, data) => total + data.temperatura, 0) / UserData.length;
-const [promedio, setPromedio] = useState(promedioTemperatura);
-  const imagen = 'Snow'; // Snow.png haze.png cloud.png
-  const direccion = '../img/' + imagen + '.png';
-  const [imgclima, setImgClima] = useState(direccion);
+const [promedio, setPromedio] = useState(promedioTemperatura.toFixed(0));
+
   
 
     return (
@@ -96,9 +96,7 @@ const [promedio, setPromedio] = useState(promedioTemperatura);
       <Temperatura>{promedio}ºC</Temperatura>
     
       <Ciudad>Cordoba</Ciudad>
-      <Imagen>
-        <img src="../Snow.png" alt="Clima" />
-      </Imagen>
+    
       </Termo>
    
     )

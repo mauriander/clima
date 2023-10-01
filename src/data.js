@@ -48,4 +48,10 @@ export const UserData = [
     temperatura: 7,
      
   },
+   {
+    id: 1,
+     hora: 0,
+    temperatura: 7,
+     
+  },
 ];
