@@ -143,7 +143,7 @@ const labels = []; // Reemplaza con tus etiquetas reales
     <BarChart chartData={userData}/>
    </Barrdiv> 
 
-<CardBox/>
+<CardBox isDarkMode={isDarkMode}/>
 
    
     
