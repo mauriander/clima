@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import  CardTemp  from './components/CardTemp';
 import  CardTermo  from './components/CardTermo';
+
 // import  CardP  from './components/CardP';
 import  CardBox  from './components/CardBox';
 import Modo from './components/Modo';
@@ -12,17 +13,20 @@ import { UserData } from './data';
 
 import {Bar} from 'react-chartjs-2';
 
+
 const AppTotal = styled.div`
   display: flex;
   width: 100%;
    height: 100vh;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+
   flex-direction: column;
   flex-wrap: wrap;
 `;
 
 const LeftColumn = styled.div`
   flex: 0 0 50%;
+
   padding: 16px;
   box-sizing: border-box;
   display: flex;
@@ -32,6 +36,7 @@ const LeftColumn = styled.div`
 `;
 
 const RightColumn = styled.div`
+
   flex: 0 0 50%; 
   padding: 16px; 
   box-sizing: border-box;
@@ -74,21 +79,23 @@ const labels = []; // Reemplaza con tus etiquetas reales
   });
 
 
+
   return (
     <AppTotal>
  
         <LeftColumn>
         <CardTermo />
          <CardTemp />
-   
 
           
        
       </LeftColumn>
       <RightColumn>
+
      <Barrdiv>
     <BarChart chartData={userData}/>
    </Barrdiv> 
+
 <CardBox/>
 <Modo/>
   </RightColumn>

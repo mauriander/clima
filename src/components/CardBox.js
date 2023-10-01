@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 // import  Card  from './Card';
 import styled from 'styled-components';
@@ -11,9 +12,11 @@ const CardBoxDiv = styled.div`
   @media (max-width: 480px) {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));   }
 
+
   @media (max-width: 480px) {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
   }
+
 `;
 const Card = styled.div`
   width: 160px;
@@ -67,6 +70,7 @@ function CardBox() {
         <Card>    <Barradiv><BarChart chartData={userhData}/></Barradiv> </Card>
         
         <Card>    <Barradiv><BarChart chartData={userData}/></Barradiv> </Card>
+
         <Card></Card>
         <Card></Card>
         <Card></Card>
@@ -75,10 +79,10 @@ function CardBox() {
 
 
       </CardBoxDiv>
-        
-        
+
     );
  
 }
 
 export default CardBox;
+

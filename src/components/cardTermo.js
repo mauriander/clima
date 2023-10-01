@@ -1,6 +1,8 @@
+
 import React, { useState} from 'react'
 import styled from 'styled-components';
 import { UserData } from '../data';
+
 
 
 const Termo = styled.div`
@@ -18,7 +20,9 @@ width: 300px;
 `;
 const Centro = styled.div`
   position: absolute;
+
   top: 50%;
+
   left: 50%;
   color: red;transform: translate(-50%, -50%);
   text-align: center;
@@ -40,7 +44,9 @@ const Temperatura = styled.div`
  position: absolute;
   
   text-align:center;
+
   color:black;
+
   font-size:bold;
   bottom: 0px;
   left: 130px;
@@ -48,6 +54,7 @@ const Temperatura = styled.div`
  
   
 `;
+
 
 const Imagen = styled.div`
 width:116px;
@@ -79,11 +86,13 @@ const [promedio, setPromedio] = useState(promedioTemperatura);
   const direccion = '../img/' + imagen + '.png';
   const [imgclima, setImgClima] = useState(direccion);
   
+
     return (
     
       <Termo>
       <Marcador>Flecha</Marcador>
       <Centro>Punto</Centro>
+
       <Temperatura>{promedio}ºC</Temperatura>
     
       <Ciudad>Cordoba</Ciudad>
@@ -94,6 +103,7 @@ const [promedio, setPromedio] = useState(promedioTemperatura);
    
     )
   
+
 }
 
 export default CardTermo

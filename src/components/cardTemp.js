@@ -1,6 +1,9 @@
+
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import { UserData } from '../data';
+
+
 
 const TotalTemp = styled.div`
   width: 300px;
@@ -8,7 +11,9 @@ const TotalTemp = styled.div`
   border-radius: 5%;
   margin:32px;
   display: flex;
+
   ${'' /* background-image: linear-gradient(-220deg, #f83600 0%, #f9d423 100%);  */}
+
 `;
 
 const LeftColumn = styled.div`
@@ -16,6 +21,7 @@ const LeftColumn = styled.div`
   padding: 16px; 
   box-sizing: border-box;
   text-align:center;
+
     background-image: linear-gradient(90deg, #f83600 0%, #f9d423 100%); 
 font-weight: bold;
 `;
@@ -26,6 +32,7 @@ const Numero = styled.h1`
   color: rgba(22, 22, 22, 0.92);
  
 
+
 `;
 
 const RightColumn = styled.div`
@@ -33,6 +40,7 @@ const RightColumn = styled.div`
   padding: 16px; 
     text-align:center;
   box-sizing: border-box;
+
    background-image: linear-gradient(90deg, #f9d423 0%, #30cad7 100%);
    font-weight: bold;
 `;
@@ -60,6 +68,7 @@ Mínima<br/>
      </TotalTemp>
     );
  
+
 }
 
 export default CardTemp
