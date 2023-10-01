@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/clima/static/css/main.84d8efcb.css",
-    "main.js": "/clima/static/js/main.6e2ff321.js",
+    "main.js": "/clima/static/js/main.8ed48d58.js",
     "static/js/787.01f48bee.chunk.js": "/clima/static/js/787.01f48bee.chunk.js",
+    "static/media/Clouds.png": "/clima/static/media/Clouds.2da1f66c8b49736bf613.png",
     "index.html": "/clima/index.html",
     "main.84d8efcb.css.map": "/clima/static/css/main.84d8efcb.css.map",
-    "main.6e2ff321.js.map": "/clima/static/js/main.6e2ff321.js.map",
+    "main.8ed48d58.js.map": "/clima/static/js/main.8ed48d58.js.map",
     "787.01f48bee.chunk.js.map": "/clima/static/js/787.01f48bee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84d8efcb.css",
-    "static/js/main.6e2ff321.js"
+    "static/js/main.8ed48d58.js"
   ]
 }
