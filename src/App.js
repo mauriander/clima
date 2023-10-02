@@ -26,18 +26,18 @@ text-align:center;
 const AppTotal = styled.div`
   display: flex;
   width: 100%;
-   height: 100vh;
+
     background-color: ${(props) => (props.isDarkMode ? '#154360' : '#FCF3CF')};
   color: ${(props) => (props.isDarkMode ? '#FCF3CF' : '#154360')};
   
   ${'' /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */}
 
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 `;
 
 const LeftColumn = styled.div`
-  flex: 0 0 50%;
+ 
   padding: 16px;
   box-sizing: border-box;
   display: flex;
@@ -52,7 +52,7 @@ const LeftColumn = styled.div`
 `;
 
 const RightColumn = styled.div`
-  flex: 0 0 50%;
+
   padding: 16px;
   box-sizing: border-box;
   display: flex;
@@ -69,11 +69,12 @@ const Barrdiv = styled.div`
  
   width: 100%;
   max-width: 480px;
-  margin: 32px;
+ 
   font-size: 32px;
   background-image: linear-gradient(135deg, #f83600 0%, #f9d423 100%);
-   @media (max-width: 400px)    {
+   @media (max-width: 40px)    {
     font-size: 14px; /* Cambia el tamaño de fuente para dispositivos móviles */
+     margin: 2px;
   }
 `;
 const ToggleButton = styled.button`

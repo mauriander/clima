@@ -1,6 +1,6 @@
 {
-  "homepage": "http://mauriander.github.io/clima",
-  "name": "clima",
+  "homepage": "http://mauriander.github.io/dashboard",
+  "name": "dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "rsuite": "^5.40.0",
     "styled-components": "^6.0.8",
     "web-vitals": "^2.1.4"
   },
