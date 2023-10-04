@@ -9,53 +9,64 @@ import "rsuite/dist/rsuite.min.css";
 const CardBoxDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  align-items:center;
-  background-: transparent;
- 
+  align-items: center;
+  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 3fr);
+    
 
-  @media (max-width: 400px) {
-    grid-template-columns: repeat(1, 3fr);
   }
 `;
 const Card = styled.div`
-  width: 32vh;
-  height: auto;
+  width: 20vh;
+ height:25vh;
   border-radius: 5%;
-  margin: 32px;
-  background-image: linear-gradient(to top, #13547a 2%, #80d0c7 60%);
-  ${
-    "" /* background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%); */
+ 
+  z-index: 1;
+  top: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(160px);
+  @media (max-width: 480px) {
+    
+ margin: 6px;
   }
+
 `;
 const Barradiv = styled.div`
+  place-items: center;
   width: 160px;
   height: 90px;
-  border-radius: 5%;
-  ${
-    "" /* background-image: linear-gradient(135deg, #f83600 0%, #f9d423 100%);  */
-  }
+  border-radius: 5%; 
   border-radius:16px;
 `;
-const Numero = styled.h1`
-  display: flex;
+const Numero = styled.h3`
   font-weight: bold;
   color: purple;
+  font-size: 16px;
 `;
 const Unidad = styled.h6`
-  display: flex;
-  color: purple;
+  text-align: center;
+   font-size: 10px;
+  color: light-purple;
 `;
 const Columna = styled.div`
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
 `;
 const Parrafo = styled.p`
-  font-size: 16px;
-  color: white;
+  font-size: 10px;
 `;
 const Titulo = styled.h3`
-  color: rgba(210, 21, 210, 0.75);
+  
+  font-size: 16px;
+  text-align:center;
 `;
 function CardBox() {
   //h humedad
@@ -72,7 +83,7 @@ function CardBox() {
   //uv indice uv
   const [useruvData, setUseruvData] = useState(6);
 
-  const [usersData, setUsersData] = useState('6:25');
+  const [usersData, setUsersData] = useState("6:25");
 
   //VISIBILITY EN KM;
   //VIENTO KM/H
@@ -82,7 +93,6 @@ function CardBox() {
 
   return (
     <CardBoxDiv>
-    
       <Card>
         <Titulo>Indice UV</Titulo>
         <Columna>
@@ -94,18 +104,22 @@ function CardBox() {
           vertical={false}
           showInfo={false}
           strokeWidth={16}
+        
+          
         />
       </Card>
-<Card>
+      <Card>
         <Titulo>Puesta del sol</Titulo>
         <Columna>
-          <Numero>{usersData} </Numero><Unidad>AM</Unidad><Parrafo>Imagen o Icono</Parrafo>
+          <Numero>{usersData} </Numero>
+          <Unidad>AM</Unidad>
+          <Parrafo>Imagen</Parrafo>
         </Columna>
         <Columna>
-          <Numero>{usersData} </Numero><Unidad>PM</Unidad><Parrafo>Imagen</Parrafo>
+          <Numero>{usersData} </Numero>
+          <Unidad>PM</Unidad>
+          <Parrafo>Imagen</Parrafo>
         </Columna>
-
-       
       </Card>
 
       <Card>
@@ -125,7 +139,8 @@ function CardBox() {
             strokeColor={" #fddb92"}
             vertical={true}
             showInfo={false}
-            strokeWidth={16}
+            strokeWidth={20}
+             style={{padding:"0px", maxHeight: "18vh" }} 
           />
         </Columna>
       </Card>
@@ -135,24 +150,23 @@ function CardBox() {
           <Numero>{userwvData} </Numero>
           <Unidad>km/h</Unidad>
         </Columna>
-        <Parrafo> Se esperan altas probabilidades de tornados</Parrafo>
+        <Parrafo> Se esperan vientos fuertes</Parrafo>
       </Card>
       <Card>
         <Titulo>Calidad de aire</Titulo>
         <Columna>
           <Numero>{useraqData[0]} </Numero>
           <Progress.Line
-            percent={useraqData[0] / 3}
+            percent={(useraqData[0]) / 3}
             strokeColor={" #fddb92"}
             vertical={true}
             showInfo={false}
             strokeWidth={16}
+             style={{ padding:"0px", maxHeight: "15vh" }} 
           />
         </Columna>
         <Parrafo> {useraqData[1]}</Parrafo>
       </Card>
-
-      <Card></Card>
     </CardBoxDiv>
   );
 }
