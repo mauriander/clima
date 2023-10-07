@@ -5,6 +5,8 @@ import { UserData } from "../data";
 import BarChart from "./BarChart";
 import { Progress } from "rsuite";
 import "rsuite/dist/rsuite.min.css";
+import sunrise from "../img/sunrise.png";
+import sunset from "../img/sunset.png";
 
 const CardBoxDiv = styled.div`
   display: grid;
@@ -113,12 +115,12 @@ function CardBox() {
         <Columna>
           <Numero>{usersData} </Numero>
           <Unidad>AM</Unidad>
-          <Parrafo>Imagen</Parrafo>
+         <img src={sunrise} alt="Clima" style={{ width: "7vh" }} />
         </Columna>
         <Columna>
           <Numero>{usersData} </Numero>
           <Unidad>PM</Unidad>
-          <Parrafo>Imagen</Parrafo>
+          <img src={sunset} alt="Clima" style={{ width: "7vh" }} />
         </Columna>
       </Card>
 
@@ -136,7 +138,7 @@ function CardBox() {
           <Unidad>%</Unidad>
           <Progress.Line
             percent={userhData}
-            strokeColor={" #fddb92"}
+            strokeColor={" #f9d423"}
             vertical={true}
             showInfo={false}
             strokeWidth={20}
@@ -158,7 +160,7 @@ function CardBox() {
           <Numero>{useraqData[0]} </Numero>
           <Progress.Line
             percent={(useraqData[0]) / 3}
-            strokeColor={" #fddb92"}
+            strokeColor={" #f9d423"}
             vertical={true}
             showInfo={false}
             strokeWidth={16}

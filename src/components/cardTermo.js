@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { UserData } from "../data";
 import ReactSpeedometer from "react-d3-speedometer";
+import Gauge from "react-canvas-gauge";
 // import SpeedoButton from "../speedo-button";
 // export const ForceRenderTheComponent = () => <SpeedoButton />;
 
@@ -14,7 +15,7 @@ const Termo2 = styled.div`
 
 const Termo = styled.div`
   width: 100%;
-  height: 45vh;
+  height: auto;
   padding:16px;
   margin:16px;
   justify-content:center;
@@ -56,18 +57,25 @@ function CardTermo() {
   return (
  
     <Termo>
-  <Temperatura>{promedio}ºC</Temperatura>
-      <ReactSpeedometer
- maxValue={50}
- value={promedio}
- valueFormat={"d"}
- customSegmentStops={[
-     0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50
- ]}
- segmentColors={["#bf616a", "#d08770", "#ebcb8b", "#a3be8c"]}
-/>
+     <Gauge
 
-      <Ciudad>Cordoba</Ciudad>
+  mode="gauge"
+  size={200}
+  enableAnimation={true}
+  // animationTimeout={250}
+  title="Temp."
+  unit={decodeURI('%C2%B0C')}
+  minValue={-15}  
+  value={promedio}
+scaleList={[
+  { scale: 5, quantity: 4, startColor: '#2e86c1', endColor: '#7dcea0' }, // Azul a Verde
+  { scale: 5, quantity: 4, startColor: '#7dcea0', endColor: '#f7dc6f' }, // Verde a Amarillo
+  { scale: 5, quantity: 4, startColor: '#f7dc6f', endColor: '#ff4e50' }  // Amarillo a Rojo
+]}
+/>
+<Ciudad>Cordoba</Ciudad>
+ <Temperatura>{promedio}ºC</Temperatura><br></br>
+      
 
     </Termo>
   );
