@@ -8,6 +8,10 @@ El Dashboard proporciona una interfaz intuitiva para visualizar el tiempo actual
 
 El compromiso con la calidad y la colaboración con instituciones académicas destacadas reflejan la dedicación de la aplicación del clima en React para brindar a los usuarios una herramienta confiable y eficaz para estar informados sobre las condiciones climáticas actuales y futuras.
 
+<video width="320" height="240" controls>
+  <source src="src/video/Dashboard.mp4" type="video/mp4">
+</video>
+
 ## Características Principales
 
 ### Visualización del Tiempo Actual
