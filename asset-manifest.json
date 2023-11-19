@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/dashboard/static/css/main.92817e5a.css",
-    "main.js": "/dashboard/static/js/main.d4cede87.js",
+    "main.css": "/dashboard/static/css/main.0c83916c.css",
+    "main.js": "/dashboard/static/js/main.e0db75c0.js",
     "static/js/787.545aecf5.chunk.js": "/dashboard/static/js/787.545aecf5.chunk.js",
     "static/media/Clouds.png": "/dashboard/static/media/Clouds.2da1f66c8b49736bf613.png",
     "index.html": "/dashboard/index.html",
-    "main.92817e5a.css.map": "/dashboard/static/css/main.92817e5a.css.map",
-    "main.d4cede87.js.map": "/dashboard/static/js/main.d4cede87.js.map",
+    "static/media/bus-svgrepo-com.svg": "/dashboard/static/media/bus-svgrepo-com.55acd0ee770be5778474efd09bdeacff.svg",
+    "main.0c83916c.css.map": "/dashboard/static/css/main.0c83916c.css.map",
+    "main.e0db75c0.js.map": "/dashboard/static/js/main.e0db75c0.js.map",
     "787.545aecf5.chunk.js.map": "/dashboard/static/js/787.545aecf5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92817e5a.css",
-    "static/js/main.d4cede87.js"
+    "static/css/main.0c83916c.css",
+    "static/js/main.e0db75c0.js"
   ]
 }
