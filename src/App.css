@@ -1,0 +1,9 @@
+/* *{
+    border-color: red;
+        border-width: 1px;
+        border-style:dashed;
+}   */
+.leaflet-container {
+    width: 100wh;
+    height: 100vh;
+}
